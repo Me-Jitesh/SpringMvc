@@ -5,7 +5,11 @@
     <title>JSP - Hello World</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1>
+    <%= "Home Page !" %>
+
+    Called By Home Controller
+
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
