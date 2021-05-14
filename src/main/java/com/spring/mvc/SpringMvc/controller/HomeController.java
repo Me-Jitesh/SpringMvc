@@ -43,4 +43,23 @@ public class HomeController {
         modelAndView.setViewName("about");
         return modelAndView;
     }
+
+    @RequestMapping("/hobby")
+    public ModelAndView ideals() {
+        ModelAndView view = new ModelAndView();
+        view.addObject("game", "Cricket, ISL, Kabaddi");
+        view.addObject("Job", "SDE");
+        view.addObject("food", "AggRoll");
+        LocalDateTime localDateTime = LocalDateTime.now();
+        view.addObject("time", localDateTime);
+
+        List<String> cric = new ArrayList<>();
+        cric.add("AB De Viliers");
+        cric.add("Suresh Raina");
+        cric.add("Zaheer Khan");
+        cric.add("Kevin Pietersen");
+        view.addObject("cric", cric);
+        view.setViewName("hobby");
+        return view;
+    }
 }

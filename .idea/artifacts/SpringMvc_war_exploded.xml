@@ -14,6 +14,7 @@
           <element id="module-output" name="SpringMvc" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.7.RELEASE" />
