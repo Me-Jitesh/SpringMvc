@@ -17,6 +17,9 @@
     <%--    ${password}--%>
     <%--    <br>--%>
 
+    ${head}
+    <br><br>
+
     Your Details By Model :-
     <br> <br>
     Welcome ${users.first_name} ${users.last_name}

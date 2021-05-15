@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class FormController {
 
+    @ModelAttribute
+    public void commonDataForModel(Model model) {
+        model.addAttribute("head", "Hola World");
+    }
+
     @RequestMapping("/form")
     public String showForm() {
         return "form";
