@@ -19,11 +19,11 @@
 
     Your Details By Model :-
     <br> <br>
-    Welcome ${first_name} ${user.last_name}
+    Welcome ${users.first_name} ${users.last_name}
     <br>
-    ${user.email}
+    ${users.email}
     <br>
-    ${user.password}
+    ${users.password}
 
 </h1>
 </body>
