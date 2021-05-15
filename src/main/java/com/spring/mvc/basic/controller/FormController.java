@@ -1,6 +1,8 @@
-package com.spring.mvc.SpringMvc.controller;
+package com.spring.mvc.basic.controller;
 
-import com.spring.mvc.SpringMvc.models.Users;
+import com.spring.mvc.basic.models.Users;
+import com.spring.mvc.basic.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class FormController {
+
+    @Autowired
+    private UserService userService;
 
     @ModelAttribute
     public void commonDataForModel(Model model) {
@@ -23,6 +28,8 @@ public class FormController {
     //    Store Data At Model Short Method(not need to @RequestParam & model.addAttribute)
     @RequestMapping(path = "/form_submitted", method = RequestMethod.POST)
     public String processForm(@ModelAttribute Users users, Model model) {
+        int res = this.userService.CreateUser(users);
+        model.addAttribute("result", res);
         return "dashboard";
     }
 
