@@ -1,5 +1,6 @@
 package com.spring.mvc.SpringMvc.controller;
 
+import com.spring.mvc.SpringMvc.models.Users;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,10 +23,14 @@ public class FormController {
                               @RequestParam("password") String password,
                               Model model) {
 
+        Users users = new Users(fName, lName, email, password);
+
         model.addAttribute("first_name", fName);
-        model.addAttribute("last_name", lName);
-        model.addAttribute("email", email);
-        model.addAttribute("password", password);
+//        model.addAttribute("last_name", lName);
+//        model.addAttribute("email", email);
+//        model.addAttribute("password", password);
+
+        model.addAttribute("user", users);
 
         return "dashboard";
     }

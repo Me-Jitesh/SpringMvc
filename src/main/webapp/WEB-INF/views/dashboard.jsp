@@ -6,16 +6,24 @@
 <body>
 <h1>
 
-    Your Name
-    ${first_name}
-    ${last_name}
+    <%--    Your Name--%>
+    <%--    ${first_name}--%>
+    <%--    ${last_name}--%>
+    <%--    <br>--%>
+    <%--    Your Email--%>
+    <%--    ${email}--%>
+    <%--    <br>--%>
+    <%--    Your Password--%>
+    <%--    ${password}--%>
+    <%--    <br>--%>
+
+    Your Details By Model :-
+    <br> <br>
+    Welcome ${first_name} ${user.last_name}
     <br>
-    Your Email
-    ${email}
+    ${user.email}
     <br>
-    Your Password
-    ${password}
-    <br>
+    ${user.password}
 
 </h1>
 </body>
