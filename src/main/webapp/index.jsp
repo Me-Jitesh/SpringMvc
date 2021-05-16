@@ -15,6 +15,7 @@
 <h3>/two</h3>
 <h3>/three</h3>
 <h3>/complex</h3>
+<h3>/static</h3>
 
 </body>
 </html>
