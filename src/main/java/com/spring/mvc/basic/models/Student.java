@@ -16,6 +16,7 @@ public class Student {
     private String branch;
     private List<String> courses;
     private String gender;
+    private PermanentAddress permanentAddress;
 
     public Long getId() {
         return id;
@@ -81,6 +82,14 @@ public class Student {
         this.gender = gender;
     }
 
+    public PermanentAddress getPermanentAddress() {
+        return permanentAddress;
+    }
+
+    public void setPermanentAddress(PermanentAddress permanentAddress) {
+        this.permanentAddress = permanentAddress;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
@@ -92,6 +101,7 @@ public class Student {
                 ", branch='" + branch + '\'' +
                 ", courses=" + courses +
                 ", gender='" + gender + '\'' +
+                ", permanentAddress=" + permanentAddress +
                 '}';
     }
 }

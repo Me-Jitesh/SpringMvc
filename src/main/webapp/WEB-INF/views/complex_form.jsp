@@ -69,6 +69,26 @@
                                 </label>
                             </div>
                         </div>
+
+                        <div class="col-6">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" name="permanentAddress.city">
+                        </div>
+                        <div class="col-6">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="state" name="permanentAddress.state">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="pin" class="form-label">Pin No</label>
+                            <input type="text" class="form-control" id="pin" name="permanentAddress.pin">
+                        </div>
+
+                        <div class="col-6">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="country" name="permanentAddress.country">
+                        </div>
+
                         <div class="col-12 text-center">
                             <button type="submit" class="btn btn-secondary text-white">Submit</button>
                         </div>
