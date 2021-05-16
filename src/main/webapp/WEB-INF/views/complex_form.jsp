@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html lang="en">
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -13,6 +14,10 @@
                  style="position: absolute; top: 50%; left: 50%; transform: translate(-50% , -50%);">
                 <div class="card-body">
                     <h1 class="card-title text-center m-5">Register Here</h1>
+
+                    <div class="alert alert-danger" role="alert">
+                        <form:errors path="studante.*"/>
+                    </div>
 
                     <form class="row g-3" method="post" action="processor">
                         <div class="col-md-6">
