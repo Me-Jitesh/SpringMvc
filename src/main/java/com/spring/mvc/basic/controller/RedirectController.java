@@ -40,5 +40,4 @@ public class RedirectController {
         System.out.println("Redirected Here");
         return " ";
     }
-
 }

@@ -9,6 +9,7 @@ public class ServeStaticController {
     @RequestMapping(path = "/static")
     public String serveStatic() {
         System.out.println("Serve Static Chal Gaya");
+        Integer.parseInt("Hola");
         return "serving_static_file";
     }
 }

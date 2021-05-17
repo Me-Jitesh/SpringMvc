@@ -11,7 +11,6 @@
 <h3>/first/hobby</h3>
 <h3>/form</h3>
 <h3>/one</h3>
-<h3>/one</h3>
 <h3>/two</h3>
 <h3>/three</h3>
 <h3>/complex</h3>
