@@ -2,6 +2,7 @@ package com.spring.mvc.basic.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -64,5 +65,12 @@ public class HomeController {
         view.addObject("cric", cric);
         view.setViewName("hobby");
         return view;
+    }
+
+    @RequestMapping("/pathvar/{uId}/{uName}")
+    public String pathVar(@PathVariable("uId") int userId, @PathVariable("uName") String userName, Model model) {
+        model.addAttribute("uId", userId);
+        model.addAttribute("uName", userName);
+        return "path_var";
     }
 }
