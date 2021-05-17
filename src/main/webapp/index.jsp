@@ -16,6 +16,7 @@
 <h3>/three</h3>
 <h3>/complex</h3>
 <h3>/static</h3>
+<h3>/fileupload</h3>
 
 </body>
 </html>

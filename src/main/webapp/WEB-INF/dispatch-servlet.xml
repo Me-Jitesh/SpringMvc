@@ -9,18 +9,21 @@
                             http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
                             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-
+    <!--    Front Controller    -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <tx:annotation-driven/>
-    <context:component-scan base-package="com.spring.mvc.basic"/>
 
-    <!--    For Static Resource -->
+    <!--    For Static Resource  -->
     <mvc:annotation-driven/>
     <mvc:resources mapping="/utils/**" location="/WEB-INF/utils/"/>
+
+    <!--    For Spring ORM -->
+
+    <tx:annotation-driven/>
+    <context:component-scan base-package="com.spring.mvc.basic"/>
 
     <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="ds">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
@@ -54,5 +57,8 @@
     <bean class="org.springframework.orm.hibernate5.HibernateTransactionManager" name="transactionManager">
         <property name="sessionFactory" ref="factory"/>
     </bean>
+
+    <!--    For File Uploading (Configuring Multipart Resolver) -->
+    <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" name="multipartResolver"/>
 
 </beans>
