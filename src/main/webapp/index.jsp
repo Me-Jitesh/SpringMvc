@@ -18,6 +18,7 @@
 <h3>/fileupload</h3>
 <h3>/first/pathvar/userId(in Int)/userName</h3>
 <h3>/error</h3>
+<h3>/welcome</h3>
 
 </body>
 </html>

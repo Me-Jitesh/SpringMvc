@@ -61,4 +61,11 @@
     <!--    For File Uploading (Configuring Multipart Resolver) -->
     <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" name="multipartResolver"/>
 
+    <!--    For Interceptor-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/interceptHome"/>
+            <bean class="com.spring.mvc.basic.InterceptorHandler"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
